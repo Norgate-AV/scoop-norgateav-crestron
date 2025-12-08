@@ -1,42 +1,73 @@
-# Scoop Bucket Template
+# scoop-norgateav-crestron
 
-<!-- Uncomment the following line after replacing placeholders -->
-<!-- [![Tests](https://github.com/<username>/<bucketname>/actions/workflows/ci.yml/badge.svg)](https://github.com/<username>/<bucketname>/actions/workflows/ci.yml) [![Excavator](https://github.com/<username>/<bucketname>/actions/workflows/excavator.yml/badge.svg)](https://github.com/<username>/<bucketname>/actions/workflows/excavator.yml) -->
+[![Tests](https://github.com/Norgate-AV/scoop-norgateav-crestron/actions/workflows/ci.yml/badge.svg)](https://github.com/Norgate-AV/scoop-norgateav-crestron/actions/workflows/ci.yml)
+[![Excavator](https://github.com/Norgate-AV/scoop-norgateav-crestron/actions/workflows/excavator.yml/badge.svg)](https://github.com/Norgate-AV/scoop-norgateav-crestron/actions/workflows/excavator.yml)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 
-Template bucket for [Scoop](https://scoop.sh), the Windows command-line installer.
+Bucket of Crestron tools and modules for [Scoop](https://scoop.sh), the Windows command-line installer.
 
-## How do I use this template?
+As module files are installed using symbolic links, it is required to run [Scoop](https://scoop.sh) with admin privileges when installing or upgrading packages.
 
-1. Generate your own copy of this repository with the "Use this template"
-   button.
-2. Allow all GitHub Actions:
-   - Navigate to `Settings` - `Actions` - `General` - `Actions permissions`.
-   - Select `Allow all actions and reusable workflows`.
-   - Then `Save`.
-3. Allow writing to the repository from within GitHub Actions:
-   - Navigate to `Settings` - `Actions` - `General` - `Workflow permissions`.
-   - Select `Read and write permissions`.
-   - Then `Save`.
-4. Document the bucket in `README.md`.
-5. Replace the placeholder repository string in `bin/auto-pr.ps1`.
-6. Create new manifests by copying `bucket/app-name.json.template` to
-   `bucket/<app-name>.json`.
-7. Commit and push changes.
-8. If you'd like your bucket to be indexed on `https://scoop.sh`, add the
-   topic `scoop-bucket` to your repository.
+This can be made less tedious by installing the [sudo](https://github.com/ScoopInstaller/Main/blob/master/bucket/sudo.json) package, which which will temporarily elevate the privileges for the current session, albeit with a UAC popup.
 
-## How do I install these manifests?
-
-After manifests have been committed and pushed, run the following:
-
-```pwsh
-scoop bucket add <bucketname> https://github.com/<username>/<bucketname>
-scoop install <bucketname>/<manifestname>
+```powershell
+scoop install sudo
 ```
 
-## How do I contribute new manifests?
+Then you can use `sudo` to install or upgrade packages.
 
-To make a new manifest contribution, please read the [Contributing
-Guide](https://github.com/ScoopInstaller/.github/blob/main/.github/CONTRIBUTING.md)
-and [App Manifests](https://github.com/ScoopInstaller/Scoop/wiki/App-Manifests)
-wiki page.
+```powershell
+sudo scoop install <manifest>
+```
+
+## Contents :book:
+
+- [Installation :zap:](#installation-zap)
+- [Usage :rocket:](#usage-rocket)
+- [Manifests :package:](#manifests-package)
+- [Team :soccer:](#team-soccer)
+- [LICENSE :balance_scale:](#license-balance_scale)
+
+## Installation :zap:
+
+Install [Scoop](https://scoop.sh) if you haven't already.
+
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+```
+
+Add this bucket.
+
+```powershell
+scoop bucket add norgateav-crestron https://github.com/Norgate-AV/scoop-norgateav-crestron
+```
+
+## Usage :rocket:
+
+```powershell
+sudo scoop install <manifest>
+```
+
+## Manifests :package:
+
+<!-- MANIFEST-TABLE:START - Do not remove or modify this section -->
+
+| Package                                                                                                                  | Description                                                |
+| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------- |
+
+<!-- MANIFEST-TABLE:END -->
+
+## Team :soccer:
+
+This project is maintained by the following person(s) and a bunch of [awesome contributors](https://github.com/Norgate-AV/scoop-norgateav-crestron/graphs/contributors).
+
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/damienbutt"><img src="https://avatars.githubusercontent.com/damienbutt?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Damien Butt</b></sub></a><br /></td>
+  </tr>
+</table>
+
+## LICENSE :balance_scale:
+
+[MIT](./LICENSE)

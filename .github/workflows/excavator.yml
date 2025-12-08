@@ -1,15 +1,25 @@
+name: Excavator
+
 on:
   workflow_dispatch:
+
+  repository_dispatch:
+    types: [excavate]
+
   schedule:
-    # run every 4 hours
-    - cron: '20 */4 * * *'
-name: Excavator
+    # run every 15 minutes
+    - cron: "*/15 * * * *"
+
 jobs:
   excavate:
     name: Excavate
+
     runs-on: windows-latest
+
     steps:
-      - uses: actions/checkout@main
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Excavate
         uses: ScoopInstaller/GithubActions@main
         env:
