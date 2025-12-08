@@ -1,0 +1,22 @@
+{
+    "version": "0.1.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Norgate-AV/smpc/releases/download/v0.1.0/smpc_0.1.0_windows_amd64.zip",
+            "bin": [
+                "smpc.exe.exe"
+            ],
+            "hash": "30db84ac99ee19e99010b024991540c75400b752542287c3be6b1aa4e7001ae8"
+        },
+        "arm64": {
+            "url": "https://github.com/Norgate-AV/smpc/releases/download/v0.1.0/smpc_0.1.0_windows_arm64.zip",
+            "bin": [
+                "smpc.exe.exe"
+            ],
+            "hash": "6b9f0c57d8d5790d000c37f70c31bc8e46477bccdf6de9759ee696d52b271edf"
+        }
+    },
+    "homepage": "https://github.com/Norgate-AV/smpc",
+    "license": "MIT",
+    "description": "Automate compiling of Crestron SIMPL Windows programs"
+}
