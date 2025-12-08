@@ -4,16 +4,16 @@
         "64bit": {
             "url": "https://github.com/Norgate-AV/smpc/releases/download/v0.1.0/smpc_0.1.0_windows_amd64.zip",
             "bin": [
-                "smpc.exe.exe"
+                "smpc.exe"
             ],
-            "hash": "30db84ac99ee19e99010b024991540c75400b752542287c3be6b1aa4e7001ae8"
+            "hash": "d43208941cbf69b6dfc6b3929e5a41627e007eb59f1c05b507cbf55bc7598aef"
         },
         "arm64": {
             "url": "https://github.com/Norgate-AV/smpc/releases/download/v0.1.0/smpc_0.1.0_windows_arm64.zip",
             "bin": [
-                "smpc.exe.exe"
+                "smpc.exe"
             ],
-            "hash": "6b9f0c57d8d5790d000c37f70c31bc8e46477bccdf6de9759ee696d52b271edf"
+            "hash": "0aaa6eba656bf2dee46509a391ffb90a6609df1c43e06ca980c8ba1fbe1c4168"
         }
     },
     "homepage": "https://github.com/Norgate-AV/smpc",
